@@ -10,10 +10,11 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const ConnectDB = require('./server/config/db');
-const passport = require('passport'); // Ensure passport is imported from 'passport'
+const passport = require('passport'); 
 const MongoStore = require('connect-mongo');
 const flash = require('express-flash');
 const initializePassport = require('./server/config/passport_config');
+const {checkAuthenticated , checkNotAuthenticated} = require('./server/middlewares/security.js')
 dotenv.config();
 
 const port = 9922;
@@ -47,12 +48,12 @@ app.use((req, res, next) => {
   next();
 });
 
-// Routes
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./server/routes/google.js'));
 app.use('/', require('./server/routes/mainroutes.js'));
 app.use('/auth', require('./server/routes/jwt.js'));
-app.use('/user', require('./server/routes/login.js'));
+app.use('/user', checkNotAuthenticated, require('./server/routes/login.js'));
 
 
 app.get('*', (req, res) => {
