@@ -7,7 +7,7 @@ require('dotenv').config();
 
 
 passport.use(new GoogleStrategy({
- //ADD TOKENS HERE
+ //ADD TOKENS HERE.
 }, async (accessToken, refreshToken, profile, done) => {
   try {
   
