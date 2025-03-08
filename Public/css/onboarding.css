@@ -5,11 +5,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  
 }
 
 html, body {
   overflow: hidden; /* Prevent scrolling */
   height: 100%; /* Ensure the body takes up the full height */
+  background-color: #fff;
 }
 
 
@@ -17,6 +19,23 @@ html, body {
   --background-color:linear-gradient(to right, #f83600 0%, #f9d423 100%);
   --bs-primary-rgb: #12296c;
 }
+
+ .video-container {
+            max-width: 900px;
+            max-height: 450px;
+            margin: auto;
+            position: fixed; /* Keeps it on top */
+            top: 40%; /* Adjust position */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1050; /* High z-index to stay above other elements */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+     
+
+
+        
 header
 {
   position: absolute;
@@ -29,23 +48,24 @@ header
   justify-content: space-between;
   align-items: center;
 }
-header .logo
+.logo
 {
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   cursor: pointer;
+  font-weight: bold;
+  align-self: flex-start;
+  text-align: start;
 }
-.toggle
-{
+.img-fluid {
+  max-width: 120%;
+  height: 180%;
+  max-height: 300%;
   position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
+left: 150px;
+  margin-top: -180px;
 }
+
 
 .showcase
 {
@@ -57,7 +77,7 @@ header .logo
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
+  background: #fff;
   transition: 0.5s;
   z-index: 2;
 }
@@ -66,128 +86,7 @@ header .logo
   right: 300px;
 }
 
-.showcase video
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-}
-.overlay
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background: ; */
-  mix-blend-mode: overlay;
-}
-.text
-{
-  position: relative;
-  z-index: 10;
-}
 
-.text h2
-{
-  font-size: 5em;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-.text h3
-{
-  font-size: 4em;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1em;
-  text-transform: uppercase;
-}
-.text p
-{
-  font-size: 1px;
-  color: #fff;
-  margin: 20px 0;
-  font-weight: 100;
-  max-width: 700px;
-}
-.text a
-{
-  display: inline-block;
-  font-size: 2px;
-  background: #fff;
-  padding: 10px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-  transition: 0.2s;
-}
-.text a:hover
-{
-  letter-spacing: 6px;
-}
-.social
-{
-  position: absolute;
-  z-index: 10;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social li
-{
-  list-style: none;
-}
-.social li a
-{
-  display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.social li a:hover
-{
-  transform: scale(0.5) translateY(-15px);
-}
-.menu
-{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu ul
-{
-  position: relative;
-}
-.menu ul li
-{
-  list-style: none;
-}
-.menu ul li a
-{
-  text-decoration: none;
-  font-size: 24px;
-  color: #111;
-}
-.menu ul li a:hover
-{
-  color: #03a9f4; 
-}
 
 @media (max-width: 991px)
 {
@@ -209,9 +108,9 @@ header .logo
 .home-title {
   position: flex;
   white-space: inherit;
-  left: -400px;
-  top: 140px;
-  color: rgb(242, 223, 195);
+  left: -80px;
+  top: 160px;
+  color: rgb(0, 0, 0);
   text-align: left;
   margin-left: 0;
 }
@@ -221,28 +120,8 @@ header .logo
 }
 
    
-.btn {
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
-  border-radius: 2rem;
-}
 
-.btn-outline-primary {
-  --bs-btn-color: var(--bs-primary-rgb);
-  --bs-btn-border-color: var(--bs-primary-rgb);
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0043a8;
-  --bs-btn-hover-border-color: #0043a8;
-  --bs-btn-focus-shadow-rgb: 13, 110, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: var(--bs-primary-rgb);
-  --bs-btn-active-border-color: #0043a8;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: var(--bs-primary-rgb);
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0d6efd;
-  --bs-gradient: none;
-}
+
 
 .login-button {
   display: inline-block;
@@ -250,27 +129,38 @@ header .logo
   margin: 5px;
   text-decoration: none;
   color: white;
-  background-color:hsl(0, 89%, 44%);;
+  background-color:#FFA500;
   border: none;
-  border-radius: 5px;
-  top: 100px;
-  left: -550px;
+  top: 200px;
+  left: -250px;
   text-align: center;
   z-index: 2; /* Ensure the button is above the video */
   position: relative;
 }
 
+
 .fs-4.mb-4 {
   position: relative;
   text-align: left;
   z-index: 2; /* Ensure the text is above the video */
-  color: white;
   font-weight: 300;
-  font-size: 14px !important; 
+  font-size: 16px !important; 
   font-family: 'Poppins', sans-serif; 
-   left: -400px;
-  top: 110px;
-  color: rgb(242, 223, 195); 
+   left: -80px;
+  top: 170px;
+  color: rgb(0, 0, 0); 
+}
+.sub-title{
+  position: relative;
+  text-align: left;
+  z-index: 2; /* Ensure the text is above the video */
+  font-weight: bold;
+  font-size: 28px !important; 
+  font-family: 'Poppins', sans-serif; 
+   left: -80px;
+  top: 170px;
+  color:#D891EF;
+
 }
 
 .login-button a {
@@ -282,21 +172,4 @@ header .logo
 .login-button:hover{
   
   background-color:#000;
-}
-
-.btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: var(--bs-primary-rgb);
-  --bs-btn-border-color: var(--bs-primary-rgb);
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0043a8;
-  --bs-btn-hover-border-color: #0043a8;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: var(--bs-primary-rgb);
-  --bs-btn-active-border-color: var(--bs-primary-rgb);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: var(--bs-primary-rgb);
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: var(--bs-primary-rgb);
 }

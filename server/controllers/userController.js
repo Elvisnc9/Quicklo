@@ -1,40 +1,55 @@
 const bcrypt = require('bcrypt');
-const User = require('../model/user'); 
+const User = require('../model/user');
+const { Op } = require('sequelize');
 
 
-exports.registerUser = async (req, res) => {
+exports.registerUser = async (req, res, next) => {
   const { username, email, password } = req.body;
+
   if (!email || !password) {
-    return res.status(400).json({ success: false, message: "Email and password are required" });
+    return res.status(400).json({
+      success: false, message: "Email and password are required"
+    });
   }
+
   try {
     console.log("Received Registration Request:", req.body);
-    const existingUser = await User.findOne({ $or: [{ username }, { email }] });
+
+
+
+    const existingUser = await User.findOne({
+      where: {
+        [Op.or]: [{ username }, { email }]
+      }
+    });
+
     if (existingUser) {
-      return res.status(400).json({ success: false, message: "User already exists" });
+      return res.status(400).json({
+        success: false, message: "User already exists Please login"
+      });
     }
 
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({
+
+    const user = await User.create({
       username,
       email,
       password: hashedPassword,
       authMethod: 'jwt',
     });
 
-   
-    await user.save();
     console.log("User Registered Successfully:", user);
 
-    return res.redirect('/user/auth');
+    return res.status(201).json({ success: true, message: "Account Created redirecting......." }),
+      next();
+
+
   } catch (error) {
     console.error("Registration Error:", error);
-    if (error.code === 11000) {
-      return res.status(400).json({ success: false, message: "Username or email already in use" });
-    }
-
-    return res.status(500).json({ success: false, message: "Server error" });
+    return res.status(500).json({
+      success: false, message: "Server error"
+    });
   }
 };
 
@@ -44,7 +59,9 @@ exports.checkUser = async (req, res) => {
 
   try {
     const user = await User.findOne({
-      $or: [{ username }, { email }],
+      where: {
+        [Op.or]: [{ username }, { email }]
+      }
     });
 
     if (user) {
@@ -62,5 +79,8 @@ exports.checkUser = async (req, res) => {
 
 exports.logoutUser = (req, res) => {
   req.logout();
-  res.json({ success: true, message: 'Logout successful' });
+  res.status(201).json({ success: true, message: 'Logout successful' });
 };
+
+
+

@@ -13,43 +13,68 @@
 </head>
 <body class="showcase">
   <header>
-    <h2 class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">QUICKLO</h2>
+    <div class="container-fluid">
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+        <a href="/user/auth" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-primary text-decoration-none fw-bold fs-2">
+        QUICKLO
+        </a>
+    
+        <ul class="nav col-12 col-md-auto mb-2  mb-md-0">
+          <li><a href="/" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+          <li><a href="" class="nav-link px-2 link-dark">About</a></li>
+          <li><a href="" class="nav-link px-2 link-dark">Talk to us</a></li>
+          <li><a href="" class="nav-link px-2 link-dark">Explore</a></li>
+        </ul>
+    
+        <div class="col-md-3 text-end">
+       
+        </div>
+      </header>
+    </div>
   </header>
-  <video src="https://cdn.pixabay.com/video/2015/10/16/1006-142621176_large.mp4" muted loop autoplay></video>
-  <div class="container-fluid container-fluid-custom py-md-5 mb-5">
+     <div class="container-fluid container-fluid-custom py-md-5 mb-5">
     <main>
+      <div class="row">
       <div class="row py-md-5 text-center justify-content-center">
         <div class="col-md-12 col-lg-6 mb-6 mb-md-0">
-          <h1 class="display-2 fw-bold mb-4 position-relative home-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="900">
-            Never Stop Exploring <br> <span class="auto-typed"> </span>
+          <h2 class="sub-title fw-bold mb-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            Enterprise & commerce platform
+          </h2>
+          <h1 class="display-2 fw-bold mb-4 position-relative home-title" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1200">
+            Scalable and Quick to Market
           </h1>
-          <p class="fs-4 mb-4" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1200">
+          <p class="fs-4 mb-4" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="1500">
             Quicklo is your trusted platform for a seamless,
-             smart, and enjoyable shopping experience. 
-             Whether you're looking for the latest trends or everyday 
-             essentials, we bring you an unbeatable selection of high-quality
-              products at incredible deals. Our user-friendly platform makes
-               shopping fast, convenient, and tailored to your needs.
-                With Quicklo, you’re not just shopping—you’re unlocking a 
-                world of possibilities where every purchase feels rewarding 
-                and hassle-free!
+            smart, and enjoyable shopping experience. 
+            Whether you're looking for the latest trends or everyday 
+            essentials, we bring you an unbeatable selection of high-quality
+             products at incredible deals. Our user-friendly platform makes
+              shopping fast, convenient, and tailored to your needs.
+               With Quicklo, you’re not just shopping—you’re unlocking a 
+               world of possibilities where every purchase feels rewarding 
+               and hassle-free
           </p>
           <button class="login-button"><a href="/user/auth">Get Started</a></button>
         </div>
+        <div class="col-md-6" >
+          <img src="assets/images/abstract-image.png"
+           alt="Example Image" class="img-fluid">
+    <video autoplay muted loop class="video-container" data-aos="fade-up"  data-aos-duration="1500"
+     src="assets/images/advert_video.mp4">
+    </video></div>
+
+      
+        </div>
+
+       
       </div>
     </main>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script>
-    var typed = new Typed('.auto-typed', {
-      strings: ["Endless Possibilities", "Deals Made For You", "Your Shopping Potential", "Smarter Ways to Shop"],
-      typeSpeed: 150,
-      backSpeed: 150,
-      loop: true
-    });
-  </script>
   <script>
     AOS.init();
   </script>

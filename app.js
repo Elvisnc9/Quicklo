@@ -9,13 +9,16 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const ConnectDB = require('./server/config/db');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// const ConnectDB = require('./server/config/db');
 const passport = require('passport'); 
 const MongoStore = require('connect-mongo');
 const flash = require('express-flash');
 const initializePassport = require('./server/config/passport_config');
-const {checkAuthenticated , checkNotAuthenticated} = require('./server/middlewares/security.js')
+const {checkAuthenticated , checkNotA4uthenticated} = require('./server/middlewares/security.js');
+const  { sequelize, connectDB } = require('./server/config/db.js')
 dotenv.config();
+
 
 const port = 9922;
 
@@ -26,15 +29,28 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(flash());
 
-ConnectDB();
+connectDB();
+
+
+sequelize.sync({ alter: true }) 
+    .then(() => console.log('Models synchronized with DB ✅'))
+    .catch(err => console.error('Error syncing models:', err));
+
+
+// app.use(session({
+//   secret: 'keyboard cat',
+//   resave: false,
+//   saveUninitialized: true,
+//   store: MongoStore.create({
+//     mongoUrl: process.env.MONGO_URI || "mongodb+srv://Elviznc:Ngwudalu12345.@notehub.ebn6j.mongodb.net/"
+//   }),
+// }));
 
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  store: MongoStore.create({
-    mongoUrl: process.env.MONGO_URI || "mongodb+srv://Elviznc:Ngwudalu12345.@notehub.ebn6j.mongodb.net/"
-  }),
+  store: new SequelizeStore({ db: sequelize }),
 }));
 
 initializePassport(passport);
@@ -53,7 +69,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', require('./server/routes/google.js'));
 app.use('/', require('./server/routes/mainroutes.js'));
 app.use('/auth', require('./server/routes/jwt.js'));
-app.use('/user', checkNotAuthenticated, require('./server/routes/login.js'));
+app.use('/user', require('./server/routes/login.js'));
+
 
 
 app.get('*', (req, res) => {

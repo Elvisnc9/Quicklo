@@ -11,4 +11,4 @@ router.get('/homepage', checkAuthenticated, (req, res) => {
 });
 
 
-module.exports= router;
+module.exports= router

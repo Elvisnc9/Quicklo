@@ -34,7 +34,7 @@ span {
 }
 
 a {
-    color: hsl(0, 87%, 42%);
+    color: #0a0678;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
@@ -48,7 +48,7 @@ a {
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 620px;
 }
 
 .form-container form {
@@ -67,7 +67,7 @@ a {
 }
 
 .social-container a {
-    border: 1px solid hsl(0, 87%, 42%);
+    border: 1px solid hsl(235, 87%, 42%);
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -87,12 +87,13 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid hsl(0, 87%, 42%);
-    background: hsl(0, 87%, 42%);
+    border: 1px solid #000000;
+    background: #000000;
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 20px;
     font-weight: bold;
-    padding: 12px 45px;
+    padding: 18px 70px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
@@ -131,20 +132,6 @@ button.ghost {
     opacity: 0;
 }
 
-.flash-message {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-.flash-message.success {
-    color: green;
-    background-color: #e6ffe6;
-}
-.flash-message.error {
-    color: red;
-    background-color: #ffe6e6;
-}
-
 .overlay-container {
     position: absolute;
     top: 0;
@@ -164,8 +151,7 @@ button.ghost {
 
 
 .overlay {
-    background: #ff416c;
-    background: linear-gradient(to right,hsl(0, 89%, 44%), hsl(0, 87%, 42%), ) no-repeat 0 0 / cover;
+    background: #000;
     color: #fff;
     position: relative;
     left: -100%;

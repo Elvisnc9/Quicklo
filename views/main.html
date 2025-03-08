@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> QUICKLO</title>
   <link rel="stylesheet" href="./css/style-prefix.css">
-  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/logo/Quicklo__1.png" type="image/x-icon">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -179,7 +179,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #ff6600;
+      background: #FFA500;
       color: white;
       border: none;
       padding: 15px;
@@ -194,7 +194,7 @@
     .logout-button {
       display: inline-block;
       padding: 7px 20px;
-      background-color: #ff4d4d;
+      background-color: #FFA500;
       color: white;
       text-decoration: none;
       border-radius: 5px;
@@ -326,10 +326,9 @@
             <option value="en-US">English</option>
             <option value="es-ES">Espa&ntilde;ol</option>
             <option value="fr">Fran&ccedil;ais</option>
-
           </select>
 
-          <a href="/logout" class="logout-button">Logout</a>
+          <a href="/logout" class="logout-button", id="logout-btn">Logout</a>
 
           </li>
         </div>
@@ -343,7 +342,7 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <img src="assets/images/logo/Quicklo__1.png" alt="Anon's logo" width="120" height="56">
+          <h1>QUICKLO</h1>
         </a>
 
         <div class="header-search-container">
@@ -928,55 +927,18 @@
       - BANNER
     -->
 
-    <div class="banner" data-aos="fade-up" data-aos-anchor-placement="top-center" , data-aos-duration="1500">
+    <div class="banner" data-aos="fade-left" , data-aos-duration="1500">
 
       <div class="container">
 
         <div class="slider-container has-scrollbar">
 
-          <div class="slider-item">
-
-            <img src="./assets/images/banner-1.jpg" alt="women's latest fashion sale" class="banner-img">
-
-            <div class="banner-content">
-
-              <p class="banner-subtitle">Trending item</p>
-
-              <h2 class="banner-title">Women's latest fashion sale</h2>
-
-              <p class="banner-text">
-                starting at &dollar; <b>20</b>.00
-              </p>
-
-              <a href="#" class="banner-btn">Shop now</a>
-
-            </div>
-
-          </div>
+          
+       
 
           <div class="slider-item">
 
-            <img src="./assets/images/banner-2.jpg" alt="modern sunglasses" class="">
-
-            <div class="banner-content">
-
-              <p class="banner-subtitle">Trending accessories</p>banner-img
-
-              <h2 class="banner-title">Modern sunglasses</h2>
-
-              <p class="banner-text">
-                starting at &dollar; <b>15</b>.00
-              </p>
-
-              <a href="#" class="banner-btn">Shop now</a>
-
-            </div>
-
-          </div>
-
-          <div class="slider-item">
-
-            <img src="./assets/images/banner-3.jpg" alt="new fashion summer sale" class="banner-img">
+            <img src="assets/images/0000.jpg" alt="new fashion summer sale" class="banner-img">
 
             <div class="banner-content">
 
@@ -1010,9 +972,170 @@
 
     <div class="category">
 
-      <div class="container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+      <div class="container" data-aos="fade-right" data-aos-easing="ease-in-sine">
 
         <div class="category-item-container has-scrollbar">
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/dress.svg" alt="dress & frock" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Dress & frock</h3>
+
+                <p class="category-item-amount">(53)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/coat.svg" alt="winter wear" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Winter wear</h3>
+
+                <p class="category-item-amount">(58)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/glasses.svg" alt="glasses & lens" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Glasses & lens</h3>
+
+                <p class="category-item-amount">(68)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/shorts.svg" alt="shorts & jeans" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Shorts & jeans</h3>
+
+                <p class="category-item-amount">(84)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/tee.svg" alt="t-shirts" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">T-shirts</h3>
+
+                <p class="category-item-amount">(35)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/jacket.svg" alt="jacket" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Jacket</h3>
+
+                <p class="category-item-amount">(16)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/watch.svg" alt="watch" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Watch</h3>
+
+                <p class="category-item-amount">(27)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
+          <div class="category-item">
+
+            <div class="category-img-box">
+              <img src="./assets/images/icons/hat.svg" alt="hat & caps" width="30">
+            </div>
+
+            <div class="category-content-box">
+
+              <div class="category-content-flex">
+                <h3 class="category-item-title">Hat & caps</h3>
+
+                <p class="category-item-amount">(39)</p>
+              </div>
+
+              <a href="#" class="category-btn">Show all</a>
+
+            </div>
+
+          </div>
+
 
           <div class="category-item">
 
@@ -1199,7 +1322,8 @@
 
         <div class="sidebar  has-scrollbar" data-mobile-menu>
 
-          <div class="sidebar-category">
+          <div class="sidebar-category" data-aos="fade-up"
+          data-aos-duration="3000">
 
             <div class="sidebar-top">
               <h2 class="sidebar-title">Category</h2>
@@ -1557,7 +1681,8 @@
 
           </div>
 
-          <div class="product-showcase">
+          <div class="product-showcase"data-aos="fade-up"
+          data-aos-duration="2500">
 
             <h3 class="showcase-heading">best sellers</h3>
 
@@ -3223,7 +3348,7 @@
             - TESTIMONIALS
           -->
 
-          <div class="testimonial">
+          <div class="testimonial" data-aos="fade-left" data-aos-duration="1400">
 
             <h2 class="title">testimonial</h2>
 
@@ -3232,15 +3357,14 @@
               <img src="./assets/images/testimonial-1.jpg" alt="alan doe" class="testimonial-banner" width="80"
                 height="80">
 
-              <p class="testimonial-name">Alan Doe</p>
+              <p class="testimonial-name">Ngwu Elviz</p>
 
               <p class="testimonial-title">CEO & Founder Invision</p>
 
               <img src="./assets/images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
 
               <p class="testimonial-desc">
-                Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                dolor dolor sit amet.
+                Quicklo delivers smart, fast, and rewarding shopping with top-quality products and unbeatable deals!
               </p>
 
             </div>
@@ -3253,21 +3377,10 @@
             - CTA
           -->
 
-          <div class="cta-container">
+          <div class="cta-container" data-aos="fade-down" data-aos-duration="2300">
 
-            <img src="./assets/images/cta-banner.jpg" alt="summer collection" class="cta-banner">
+            <img src="assets/images/carrd.jpg" alt="summer collection" class="cta-banner">
 
-            <a href="#" class="cta-content">
-
-              <p class="discount">25% Discount</p>
-
-              <h2 class="cta-title">Summer collection</h2>
-
-              <p class="cta-text">Starting @ $10</p>
-
-              <button class="cta-btn">Shop now</button>
-
-            </a>
 
           </div>
 
@@ -3277,7 +3390,7 @@
             - SERVICE
           -->
 
-          <div class="service">
+          <div class="service" data-aos="fade-right" data-aos-duration="1400">
 
             <h2 class="title">Our Services</h2>
 
@@ -3372,7 +3485,7 @@
 
 
 
-    <div class="blog">
+    <div class="blog" data-aos="fade-left" data-aos-duration="1400">
 
       <div class="container">
 
@@ -3381,7 +3494,7 @@
           <div class="blog-card">
 
             <a href="#">
-              <img src="./assets/images/blog-1.jpg" alt="Clothes Retail KPIs 2021 Guide for Clothes Executives"
+              <img src="assets/images/young-handsome-man-choosing-hat-shop.jpg" alt="Clothes Retail KPIs 2021 Guide for Clothes Executives"
                 width="300" class="blog-banner">
             </a>
 
@@ -3427,7 +3540,7 @@
           <div class="blog-card">
 
             <a href="#">
-              <img src="./assets/images/blog-3.jpg" alt="EBT vendors: Claim Your Share of SNAP Online Revenue."
+              <img src="assets/images/blond-man-with-shirt-looking-smartphone.jpg" alt="EBT vendors: Claim Your Share of SNAP Online Revenue."
                 class="blog-banner" width="300">
             </a>
 
@@ -3779,39 +3892,80 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script>
     AOS.init({
       once: true,
     });
+   
+    
+    document.getElementById("logout-btn").addEventListener("click", function (event) {
+  event.preventDefault(); // Stop default action
+
+  console.log("Logout button clicked!"); // Check if button is working
+
+  Swal.fire({
+    title: "Are you sure?",
+    text: "You are about to log out.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Yes, Logout",
+    cancelButtonText: "No, Stay",
+    confirmButtonColor: "#d33",
+    cancelButtonColor: "#3085d6"
+  }).then((result) => {
+    console.log("User choice:", result); // Check what the user clicked
+
+    if (result.isConfirmed) {
+      console.log("Logging out..."); // Should appear when Yes is clicked
+
+      setTimeout(() => {
+        window.location.href = "/logout"; // Change this to match your logout route
+      }, 1000);
+    }
+  });
+});
 
 
-    // document.addEventListener("DOMContentLoaded", function () {
-    //     const targetDate = new Date("2025-12-31T23:59:59").getTime();
 
-    //     function updateCountdown() {
-    //         const now = new Date().getTime();
-    //         const timeLeft = targetDate - now;
 
-    //         if (timeLeft <= 0) {
-    //             document.querySelector(".countdown-content .display-number").innerHTML = "<p>Time's up!</p>";
-    //             clearInterval(countdownInterval);
-    //             return;
-    //         }
+    document.addEventListener("DOMContentLoaded", function () {
+        const targetDate = new Date("2025-12-31T23:59:59").getTime();
 
-    //         const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    //         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    //         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    //         const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
 
-    //         document.querySelectorAll(".countdown-content .display-number")[0].textContent = days;
-    //         document.querySelectorAll(".countdown-content .display-number")[1].textContent = hours;
-    //         document.querySelectorAll(".countdown-content .display-number")[2].textContent = minutes;
-    //         document.querySelectorAll(".countdown-content .display-number")[3].textContent = seconds;
-    //     }
+            if (timeLeft <= 0) {
+                document.querySelector(".countdown-content .display-number").innerHTML = "<p>Time's up!</p>";
+                clearInterval(countdownInterval);
+                return;
+            }
 
-    //     const countdownInterval = setInterval(updateCountdown, 1000);
-    //     updateCountdown();
-    // });
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.querySelectorAll(".countdown-content .display-number")[0].textContent = days;
+            document.querySelectorAll(".countdown-content .display-number")[1].textContent = hours;
+            document.querySelectorAll(".countdown-content .display-number")[2].textContent = minutes;
+            document.querySelectorAll(".countdown-content .display-number")[3].textContent = seconds;
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".category-item-container");
+  const scroller = document.querySelector(".scroller");
+
+  const clone = scroller.cloneNode(true);
+  container.appendChild(clone);
+});
+
 
     document.addEventListener("DOMContentLoaded", function () {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
