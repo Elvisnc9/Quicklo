@@ -5,6 +5,9 @@ const authController = require('../controllers/authController');
 
 
 
-router.get('/auth',  authController.login ) ; 
+router.get('/auth',  authController.login ) ;
 
-module.exports= router;
+router.get('/passwordreset', authController.Passwordreset);
+
+
+module.exports= router
